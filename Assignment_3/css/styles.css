@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url('fonts/robotocondensed-regular-webfont.woff2') format('woff2'),
+         url('fonts/robotocondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+	height: 100%;
+}
+
+body {
+    font-family: 'roboto_condensedregular', Arial, serif;
+	height: 100%;
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 2em;
+	font-weight:bold;
+}
+
+footer {
+	background-color: #333333;
+	color: #FFFFFF;
+	padding: 5px;
+}
+
+button:hover {
+	background: pink;
+}
+
+button:active {
+	background: yellow;
+}
+
+.center {
+	text-align: center;
+}
+
+.photo {
+	
+}
+
+.innner {
+	width: 100px;
+    height: 100px;
+    text-size: 1em;
+    animation-name: ex;
+    animation-duration: 4s;
+}
+
+@keyframes ex {
+    from {text-size: 1em;}
+    to {text-size:4em;}
+}
+
+.bg {
+    background-image: url("trooper.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#pond {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#links {
+	text-align: right;
+}
+
+#button-wrapper {
+	background: linear-gradient(to bottom right, red, orange, green, blue);
+	padding-top: 80px;
+	padding-bottom: 60px;
+	display: flex;
+	justify-content: center;
+}
+
+#about-wrapper {
+	background-color: #82fffa;
+	padding: 20px;
+}
