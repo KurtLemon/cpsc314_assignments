@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'breeserif';
+    src: url('fonts/breeserif.woff2') format('woff2'),
+         url('fonts/breeserif.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: 'breeserif', Arial, serif;
+}
+
+header {
+	font-size: 1.5em;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+p {
+	font-size: 1.5em;
+}
+
+a:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #dbe8ff;
+}
+
+.header-button {
+	padding: 5px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+	flex-direction: column;
+	background-color: #e2e2e2;
+	margin: 5px;
+	padding: 10px;
+	width: 25%;
+	text-align: center;
+}
+
+@media only screen and (max-width: 760px){
+	.box {
+		transform: none;
+		position: relative;
+		width: 100%;
+	}
+}
+
+
+
+.box-icon-wrapper {
+	text-align: center;
+	font-size: 5em;
+}
+
+.box-text {
+	text-align: center;
+	padding: 10px;
+}
+
+.box-button {
+	width: 50%;
+	border: 2px solid #000000;
+	border-radius: 4px;
+	font-size: 1em;
+	padding: 5px;
+	margin: auto;
+	position: relative;
+}
+
+.box-button:hover {
+    box-shadow: 0 5px 7px 0 rgba(0,0,0,0.24), 0 5px 7px 0 rgba(0,0,0,0.19);
+	background-color: #939393;
+}
+
+.button {
+	border: 2px solid #000000;
+	border-radius: 4px;
+	font-size: 1em;
+	padding: 5px;
+	margin: 5px;
+}
+
+.button:hover {
+    box-shadow: 0 5px 7px 0 rgba(0,0,0,0.24), 0 5px 7px 0 rgba(0,0,0,0.19);
+	background-color: #939393;
+}
+
+#box-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#header {
+	background-color: #303030;
+}
+
+#header-navigation {
+	padding: 20px;
+}
+
+#car-icon-wrapper {
+	color: #ffffff;
+	font-size: 2em;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+#title-wrapper {
+	background-color: #b7babf;
+	text-align: center;
+	padding: 30px;
+}
