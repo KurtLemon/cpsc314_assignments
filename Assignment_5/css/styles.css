@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'breeserif';
+    src: url('fonts/breeserif.woff2') format('woff2'),
+         url('fonts/breeserif.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: 'breeserif', Arial, serif;
+	text-align: center;
+}
+
+header {
+	font-size: 1.5em;
+	background-color: #00ffdd;
+	padding: 40px;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+textarea {
+   resize: none;
+}
+
+input:focus, select:focus, textarea:focus {
+	border-color: #ff0000;
+}
+
+input, select, textarea {
+	border-color: #00ff00;
+	border-radius: 4px;
+}
+
+::placeholder {
+	color: #ff3366;
+	opacity: 1;
+}
+
+#submit:hover {
+	border: 2px solid black;
+}

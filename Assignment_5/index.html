@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Assignment #4</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header>
+			Bike Selector: Enter your information and we'll find a bike for you!
+		</header>
+		<div id="body-wrapper">
+			<form>
+				Preferred Brand: 
+				<input type="text" name="brandTextArea"><br>
+				Size(cm):
+				<input type="number" name="bikeSize"><br>
+				Terrain:
+				<select type="dropdown" name="terrain">
+					<option value="road">Road</option>
+					<option value="gravel">Gravel</option>
+					<option value="hardpack">Hard-pack dirt</option>
+					<option value="softpack">Soft-pack dirt</option>
+					<option value="downhill">Downhill/rocks</option>
+					<option value="urban">Urban</option>
+					<option value="skate">Skate parks</option>
+					<option value="snowsand">Snow or sand</option>
+				</select><br>
+				<h3>Price Range:</h3>
+				$400-$800
+				<input type="radio" name="price"><br>
+				$800-$1600
+				<input type="radio" name="price"><br>
+				$1600-$2800
+				<input type="radio" name="price"><br>
+				$2800-$4000
+				<input type="radio" name="price"><br>
+				$4000+
+				<input type="radio" name="price"><br>
+				Other Input:
+				<textarea name="other" placeholder="Anything else we should consider?"></textarea><br>
+				<input id="submit" type="submit" value="Submit">
+			</form>
+		</div>
+	</body>
+</html>
