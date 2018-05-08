@@ -21,6 +21,29 @@
         <div id="map"></div>
         <script>
             function initMap() {
+                let styledMapType = new google.maps.StyledMapType(
+                    [
+                        {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
+                        {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
+                        {elementType: 'labels.text.stroke', stylers: [{color: '#f5f1e6'}]},
+                        {
+                            featureType: 'poi.park',
+                            elementType: 'geometry.fill',
+                            stylers: [{color: '#3f6627'}]
+                        },
+                        {
+                            featureType: 'road.highway',
+                            elementType: 'geometry.fill',
+                            stylers: [{color: '#662727'}]
+                        },
+                        {
+                            featureType: 'water',
+                            elementType: 'geometry.fill',
+                            stylers: [{color: '#275366'}]
+                        },
+                    ],
+                    {name: 'Styled Map'});
+
                 let auckland = {lat: -36.8485, lng: 174.7633};
                 let rotorua = {lat: -38.1368, lng: 176.2497};
                 let spokane = {lat: 47.6588, lng: -117.4260};
@@ -29,8 +52,16 @@
 
                 let map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 2,
-                    center: {lat: 15, lng: -140}
+                    center: {lat: 15, lng: -140},
+                    mapTypeControlOptions: {
+                        mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                            'styled_map']
+                    }
+
                 });
+                map.mapTypes.set('styled_map', styledMapType);
+                map.setMapTypeId('styled_map');
+
                 let aucklandMarker = new google.maps.Marker({
                     position: auckland,
                     map: map,
