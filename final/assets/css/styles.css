@@ -1,0 +1,62 @@
+/* Main Stylesheet */
+@font-face {
+    font-family: 'notosans';
+    src: url('../font/notosans.woff2') format('woff2'),
+    url('../font/notosans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Element Types */
+header {
+    font-size: 1.5em;
+    background-color: cadetblue;
+    padding: 20px;
+}
+body {
+    font-family: 'notosans', Arial, serif;
+    background-color: slategray;
+}
+footer {
+    padding: 5px;
+    background-color: cadetblue;
+}
+nav {
+    display: inline-block;
+    float: right;
+}
+h4 {
+    font-size: 1.5em;
+}
+
+
+/* Classes */
+.content-title {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 60px;
+}
+.content-section {
+    padding: 20px;
+    background-color: azure;
+}
+
+/* IDs */
+#userInput {
+    padding: 40px;
+    background-color: azure;
+}
+#content {
+    padding: 30px;
+    background-color: #666666;
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+/* Custom Classes for Things */
+.text-box-error {
+    border: 3px solid red;
+    border-radius: 4px;
+}

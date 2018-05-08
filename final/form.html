@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bike Info</title>
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="icon" href="assets/icon/bike.ico" type="icon" sizes="16x16">
+    </head>
+    <body>
+        <header>
+            <a href="index.html">Home</a>
+            <nav>
+                <a href="form.html">Form</a>
+                <a href="map.html">Map</a>
+                <a href="api.html">API</a>
+            </nav>
+        </header>
+        <div id="userInput">
+            Preferred Brand:
+            <input type="text" name="brandTextArea" id="brand"><br>
+            Size(cm):
+            <input type="number" name="bikeSize" id="size"><br>
+            Terrain:
+            <select type="dropdown" name="terrain" id="terrain">
+                <option value="road">Road</option>
+                <option value="gravel">Gravel</option>
+                <option value="hardpack">Hard-pack dirt</option>
+                <option value="softpack">Soft-pack dirt</option>
+                <option value="downhill">Downhill/rocks</option>
+                <option value="urban">Urban</option>
+                <option value="skate">Skate parks</option>
+                <option value="snowsand">Snow or sand</option>
+            </select><br>
+            <h3 id="price">Price Range:</h3>
+            $400-$800
+            <input type="radio" name="price" class="price" value="Low"><br>
+            $800-$1600
+            <input type="radio" name="price" class="price" value="Mid-range"><br>
+            $1600-$2800
+            <input type="radio" name="price" class="price" value="High-end"><br>
+            $2800-$4000
+            <input type="radio" name="price" class="price" value="Elite"><br>
+            $4000+
+            <input type="radio" name="price" class="price" value="Superbike"><br>
+            Other Input:
+            <textarea name="other" placeholder="Anything else we should consider?"></textarea>
+            <br>
+            <button id="submit" type="submit">Submit</button>
+        </div>
+        <div id="content"></div>
+        <script src="assets/js/form.js"></script>
+    </body>
+</html>

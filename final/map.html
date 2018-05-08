@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mountain Bike Map</title>
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="icon" href="assets/icon/bike.ico" type="icon" sizes="16x16">
+    </head>
+    <body>
+        <header>
+            <a href="index.html">Home</a>
+            <nav>
+                <a href="form.html">Form</a>
+                <a href="map.html">Map</a>
+                <a href="api.html">API</a>
+            </nav>
+        </header>
+        <h3>Places I've been mountain biking</h3>
+        <div id="map"></div>
+        <script>
+            function initMap() {
+                let auckland = {lat: -36.8485, lng: 174.7633};
+                let rotorua = {lat: -38.1368, lng: 176.2497};
+                let spokane = {lat: 47.6588, lng: -117.4260};
+                let sammamish = {lat: 47.6163, lng: -122.0356};
+                let zion ={lat: 37.2982, lng: -113.0263};
+
+                let map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 2,
+                    center: {lat: 15, lng: -140}
+                });
+                let aucklandMarker = new google.maps.Marker({
+                    position: auckland,
+                    map: map,
+                    title: 'Auckland'
+                });
+                let rotoruaMarker = new google.maps.Marker({
+                    position: rotorua,
+                    map: map,
+                    title: 'Rotorua'
+                });
+                let spokaneMarker = new google.maps.Marker({
+                    position: spokane,
+                    map: map,
+                    title: 'Spokane'
+                });
+                let sammamishMarker = new google.maps.Marker({
+                    position: sammamish,
+                    map: map,
+                    title: 'Sammamish'
+                });
+                let zionMarker = new google.maps.Marker({
+                    position: zion,
+                    map: map,
+                    title: 'Zion'
+                });
+
+                let aucklandInfoWindow = new google.maps.InfoWindow({
+                    content: "Auckland Park Trails: 6/10"
+                });
+                let rotoruaInfoWindow = new google.maps.InfoWindow({
+                    content: "Rotorua Bike Park & Redwoods Forest: 10/10"
+                });
+                let spokaneInfoWindow = new google.maps.InfoWindow({
+                    content: "Beacon Hill: 8/10"
+                });
+                let sammamishInfoWindow = new google.maps.InfoWindow({
+                    content: "Duthie Hill: 9/10"
+                });
+                let zionInfoWindow = new google.maps.InfoWindow({
+                    content: "Zion National Park: 8/10"
+                });
+
+                aucklandMarker.addListener('click', function(){
+                    aucklandInfoWindow.open(map, aucklandMarker);
+                });
+                rotoruaMarker.addListener('click', function(){
+                    rotoruaInfoWindow.open(map, rotoruaMarker);
+                });
+                spokaneMarker.addListener('click', function(){
+                    spokaneInfoWindow.open(map, spokaneMarker);
+                });
+                sammamishMarker.addListener('click', function(){
+                    sammamishInfoWindow.open(map, sammamishMarker);
+                });
+                zionMarker.addListener('click', function(){
+                    zionInfoWindow.open(map, zionMarker);
+                });
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIKamQxnIGE7OkZv6sZAuIan4B-KmveFk&callback=initMap">
+        </script>
+
+    </body>
+</html>
